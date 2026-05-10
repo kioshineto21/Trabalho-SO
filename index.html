@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Site educacional comparando Sistemas Operacionais Livres e Proprietários — trabalho acadêmico de Sistemas de Informação." />
+<meta name="author" content="Kioshi Iquegami Neto" />
+<title>SO Livres x Proprietários — Kioshi Iquegami Neto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Progress bar de scroll -->
+<div id="scrollProgress"></div>
+
+<!-- Navbar fixa -->
+<header class="navbar glass">
+  <a href="#home" class="logo">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span>OS<span class="grad">Compare</span></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#livres">Livres</a>
+    <a href="#proprietarios">Proprietários</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#criterios">Critérios</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#comparador">Comparador</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#benchmark">Benchmark</a>
+    <a href="#historia">História</a>
+    <a href="#terminal">Terminal</a>
+    <a href="#conclusao">Conclusão</a>
+    <a href="prompts.html">Prompts</a>
+  </nav>
+  <button id="themeToggle" class="theme-toggle" title="Alternar tema">🌙</button>
+  <button id="menuToggle" class="menu-toggle">☰</button>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content reveal">
+    <span class="eyebrow">Sistemas de Informação · 1º Ano B</span>
+    <h1>Sistemas Operacionais <span class="grad">Livres</span> <span class="x">x</span> <span class="grad2">Proprietários</span></h1>
+    <p class="subtitle">Uma comparação técnica, econômica e social entre os dois modelos que movem o mundo da computação — do servidor ao desktop, da nuvem ao Steam Deck.</p>
+    <div class="hero-cta">
+      <a href="#comparativo" class="btn btn-primary">Ver comparativo →</a>
+      <a href="#simulador" class="btn btn-ghost">Qual SO combina com você?</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>96%</strong><span>dos top 1M servidores web rodam Linux</span></div>
+      <div><strong>72%</strong><span>dos desktops do mundo usam Windows</span></div>
+      <div><strong>100%</strong><span>dos supercomputadores do TOP500 rodam Linux</span></div>
+    </div>
+  </div>
+  <div class="hero-card glass reveal">
+    <div class="term-mini">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <pre><code><span class="prompt">kioshi@uni</span>:<span class="path">~</span>$ whoami
+<span class="out">Kioshi Iquegami Neto · SI 1ºB</span>
+<span class="prompt">kioshi@uni</span>:<span class="path">~</span>$ cat objetivo.txt
+<span class="out">Comparar SO livres e proprietários
+considerando aspectos técnicos,
+econômicos, sociais e de desempenho.</span>
+<span class="prompt">kioshi@uni</span>:<span class="path">~</span>$ <span class="caret">_</span></code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRES -->
+<section id="livres" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Open Source</span>
+    <h2>O que são Sistemas Operacionais <span class="grad">Livres</span></h2>
+    <p>Software de código aberto, mantido por comunidades, com liberdade para usar, estudar, modificar e redistribuir.</p>
+  </div>
+  <div class="cards-4">
+    <div class="card reveal"><div class="icon icon-code"></div><h3>Código aberto</h3><p>Qualquer pessoa pode ler, auditar e contribuir com o código-fonte.</p></div>
+    <div class="card reveal"><div class="icon icon-mod"></div><h3>Liberdade de modificação</h3><p>As 4 liberdades da FSF: usar, estudar, redistribuir e melhorar.</p></div>
+    <div class="card reveal"><div class="icon icon-com"></div><h3>Comunidade global</h3><p>Milhares de desenvolvedores ao redor do mundo colaboram no kernel.</p></div>
+    <div class="card reveal"><div class="icon icon-distro"></div><h3>Distribuições</h3><p>Ubuntu, Debian, Fedora, Linux Mint, Arch Linux e muitas outras.</p></div>
+  </div>
+
+  <div class="distros reveal">
+    <div class="distro" style="--c:#E95420"><h4>Ubuntu</h4><p>Acessível, popular, base Debian.</p></div>
+    <div class="distro" style="--c:#A80030"><h4>Debian</h4><p>Estabilidade e filosofia livre.</p></div>
+    <div class="distro" style="--c:#294172"><h4>Fedora</h4><p>Inovação, upstream do RHEL.</p></div>
+    <div class="distro" style="--c:#87CF3E"><h4>Linux Mint</h4><p>Ideal para iniciantes.</p></div>
+    <div class="distro" style="--c:#1793D1"><h4>Arch Linux</h4><p>Minimalista e personalizável.</p></div>
+  </div>
+</section>
+
+<!-- PROPRIETÁRIOS -->
+<section id="proprietarios" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Closed Source</span>
+    <h2>O que são Sistemas <span class="grad2">Proprietários / Pagos</span></h2>
+    <p>Software de código fechado, controlado por uma empresa, distribuído sob licença paga e com suporte oficial.</p>
+  </div>
+  <div class="cards-4">
+    <div class="card reveal"><div class="icon icon-lock"></div><h3>Licenciamento</h3><p>Uso condicionado a contrato — por usuário, dispositivo ou núcleo.</p></div>
+    <div class="card reveal"><div class="icon icon-shield"></div><h3>Código fechado</h3><p>Somente o fornecedor tem acesso ao código original.</p></div>
+    <div class="card reveal"><div class="icon icon-build"></div><h3>Controle empresarial</h3><p>Roadmap e recursos definidos pela empresa.</p></div>
+    <div class="card reveal"><div class="icon icon-head"></div><h3>Suporte oficial</h3><p>SLA, atendimento 24/7 e responsabilidade contratual.</p></div>
+  </div>
+
+  <div class="distros reveal">
+    <div class="distro" style="--c:#0078D4"><h4>Windows</h4><p>Líder em desktops.</p></div>
+    <div class="distro" style="--c:#999999"><h4>macOS</h4><p>Exclusivo Apple, UNIX-like.</p></div>
+    <div class="distro" style="--c:#0A2540"><h4>Windows Server</h4><p>Active Directory, IIS, Hyper-V.</p></div>
+    <div class="distro" style="--c:#EE0000"><h4>RHEL</h4><p>Linux comercial com SLA.</p></div>
+    <div class="distro" style="--c:#34A853"><h4>ChromeOS Flex</h4><p>SO em nuvem da Google.</p></div>
+  </div>
+</section>
+
+<!-- COMPARATIVO -->
+<section id="comparativo" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Tabela comparativa</span>
+    <h2>Comparativo Geral</h2>
+    <p>Visão lado a lado entre o modelo livre e o proprietário em 12 critérios.</p>
+  </div>
+  <div class="table-wrap glass reveal">
+    <table class="modern-table">
+      <thead><tr><th>Critério</th><th>SO Livre</th><th>SO Proprietário</th></tr></thead>
+      <tbody>
+        <tr><td>Custo</td><td class="ok">Gratuito</td><td class="bad">Pago / licença</td></tr>
+        <tr><td>Segurança</td><td class="ok">Alta (auditável)</td><td class="mid">Alta (mas fechada)</td></tr>
+        <tr><td>Código-fonte</td><td class="ok">Aberto</td><td class="bad">Fechado</td></tr>
+        <tr><td>Facilidade de uso</td><td class="mid">Média / variável</td><td class="ok">Alta</td></tr>
+        <tr><td>Compatibilidade de software</td><td class="mid">Média</td><td class="ok">Altíssima</td></tr>
+        <tr><td>Personalização</td><td class="ok">Total</td><td class="bad">Limitada</td></tr>
+        <tr><td>Mercado / popularidade</td><td class="mid">Forte em servidores</td><td class="ok">Forte em desktops</td></tr>
+        <tr><td>Jogos</td><td class="mid">Crescendo (Proton)</td><td class="ok">Excelente (Windows)</td></tr>
+        <tr><td>Drivers</td><td class="mid">Depende do hardware</td><td class="ok">Ampla cobertura</td></tr>
+        <tr><td>Desempenho</td><td class="ok">Alto, leve</td><td class="mid">Bom, mais pesado</td></tr>
+        <tr><td>Atualizações</td><td class="ok">Frequentes, opcionais</td><td class="mid">Forçadas em alguns casos</td></tr>
+        <tr><td>Suporte</td><td class="mid">Comunidade / empresas</td><td class="ok">Oficial 24/7</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CRITÉRIOS -->
+<section id="criterios" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Análise por critério</span>
+    <h2>Onde cada um brilha</h2>
+  </div>
+  <div class="cards-3">
+    <div class="card reveal"><h3>🔐 Segurança</h3><p>O Linux costuma ser visto como mais seguro porque qualquer pessoa pode olhar o código e descobrir falhas — isso ajuda a corrigir bugs rápido. Além disso, ele já vem com permissões bem rígidas, então um programa qualquer não consegue mexer no sistema sem sua autorização. O Windows também evoluiu bastante: hoje vem com o Defender de fábrica e o Smart App Control bloqueando programas suspeitos. Mesmo assim, como ele é o sistema mais usado no mundo, acaba sendo o alvo preferido dos vírus.</p></div>
+    <div class="card reveal"><h3>⚡ Desempenho</h3><p>O Linux é leve de verdade — dá pra rodar ele tranquilamente em um PC velho de 10 anos atrás que mal liga o Windows 11. Ele consome pouca RAM em estado parado e usa pouca CPU. O macOS é otimizado pra rodar nos chips M1/M2/M3 da Apple e fica absurdamente rápido. Já o Windows é mais "completo de fábrica" mas isso cobra um preço: precisa de mais memória, mais espaço em disco e atualiza com mais frequência, o que deixa o sistema mais pesado no dia a dia.</p></div>
+    <div class="card reveal"><h3>🧩 Compatibilidade</h3><p>Aqui o Windows ganha disparado quando o assunto é programa comercial: Adobe Photoshop, AutoCAD, Office completo, jogos AAA e softwares de empresa rodam tudo nele sem dor de cabeça. O macOS também tem boa cobertura de softwares profissionais (principalmente design e edição de vídeo). O Linux, por outro lado, é o rei em servidores, containers (Docker), nuvem e ferramentas de programação — mas pra alguns programas específicos do dia a dia ainda precisa de "gambiarra" tipo Wine ou máquina virtual.</p></div>
+    <div class="card reveal"><h3>🖱️ Facilidade de uso</h3><p>O macOS e o Windows são feitos pra qualquer pessoa usar — você liga o computador e já entende tudo, não precisa saber nada de tecnologia. O Linux já foi muito difícil, mas distros como Linux Mint, Ubuntu e Pop!_OS mudaram esse jogo: hoje dá pra usar normal, sem nunca abrir o terminal. Mesmo assim, em algumas situações específicas (instalar driver de impressora, mexer em rede), o Linux ainda exige um pouquinho mais de paciência que o Windows.</p></div>
+    <div class="card reveal"><h3>💼 Mercado de trabalho</h3><p>Saber Linux hoje em dia praticamente vale ouro. Em áreas como DevOps, Cloud (AWS, Azure, GCP), Cibersegurança e Engenharia de Dados, é praticamente obrigatório. As empresas pagam mais para quem entende Linux porque os servidores delas rodam quase tudo nele. O Windows ainda manda no mundo corporativo de escritório (suporte técnico, helpdesk, administração de redes), e o macOS é forte entre desenvolvedores de iOS e profissionais criativos.</p></div>
+    <div class="card reveal"><h3>🖥️ Servidores</h3><p>Em servidor é Linux quase sempre — Ubuntu Server, Debian, RHEL e CentOS dominam a internet inteira. 96% dos sites do mundo rodam em Linux. Por quê? Porque é gratuito, leve, estável (servidores Linux ficam ligados anos sem reiniciar) e personalizável. O Windows Server tem espaço em empresas que já usam Active Directory, Exchange e o ecossistema Microsoft inteiro, mas em quantidade ele é minoria absoluta.</p></div>
+    <div class="card reveal"><h3>🏢 Empresas</h3><p>Hoje praticamente nenhuma empresa grande usa só um sistema — o padrão é misturar tudo. Os funcionários trabalham no Windows (porque já estão acostumados e o Office funciona bem), os designers e o pessoal de marketing geralmente ficam no macOS, e a infraestrutura toda (servidores, banco de dados, sites) roda em Linux. Essa mistura aproveita o melhor de cada sistema sem ficar preso a um só.</p></div>
+    <div class="card reveal"><h3>👨‍💻 Desenvolvimento</h3><p>Pra programar, Linux e macOS são imbatíveis. O terminal funciona melhor, ferramentas como Docker, Kubernetes, Git e linguagens como Python e Node.js rodam de forma mais natural. O macOS é tipo um "Linux bonito" porque também é baseado em UNIX. O Windows ficou pra trás por muito tempo, mas a Microsoft criou o WSL2 (que é praticamente um Linux rodando dentro do Windows) e isso fechou bastante essa diferença.</p></div>
+    <div class="card reveal"><h3>🎮 Jogos</h3><p>Pra jogar, o Windows ainda é o rei — quase 100% dos jogos saem primeiro nele e funcionam sem precisar configurar nada. O macOS tem pouquíssimos jogos nativos. Mas o Linux teve uma virada gigante nos últimos anos: a Valve (do Steam) criou o Proton, que faz jogos de Windows rodarem no Linux, e lançou o Steam Deck (videogame portátil) com Linux dentro. Hoje milhares de jogos funcionam bem no Linux, mesmo os com anti-cheat estão começando a liberar.</p></div>
+    <div class="card reveal"><h3>🔌 Hardware e drivers</h3><p>O Windows tem suporte praticamente universal — você pluga qualquer impressora, webcam, placa de vídeo ou periférico esquisito e funciona na hora. O Linux melhorou muito (a maioria das coisas funciona automaticamente), mas em hardware muito novo ou muito específico (placa Wi-Fi de notebook, alguns scanners, periféricos gamer com RGB) pode dar trabalho. O macOS só funciona bem com hardware Apple, então essa questão nem se aplica.</p></div>
+  </div>
+</section>
+
+<!-- VANTAGENS E DESVANTAGENS -->
+<section id="vantagens" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Prós e contras</span>
+    <h2>Vantagens e Desvantagens</h2>
+  </div>
+  <div class="vs-grid">
+    <div class="vs-card glass reveal">
+      <h3>🐧 Sistemas Livres</h3>
+      <div class="pros"><h4>Vantagens</h4><ul>
+        <li>Gratuitos e sem licença</li>
+        <li>Código aberto e auditável</li>
+        <li>Alta personalização</li>
+        <li>Leves e estáveis</li>
+        <li>Comunidade global</li>
+      </ul></div>
+      <div class="cons"><h4>Desvantagens</h4><ul>
+        <li>Menos compatibilidade com softwares comerciais</li>
+        <li>Suporte oficial limitado (exceto RHEL/SUSE)</li>
+        <li>Curva de aprendizado em distros avançadas</li>
+        <li>Menos jogos nativos</li>
+      </ul></div>
+    </div>
+    <div class="vs-card glass reveal">
+      <h3>🪟 Sistemas Proprietários</h3>
+      <div class="pros"><h4>Vantagens</h4><ul>
+        <li>Suporte oficial 24/7</li>
+        <li>Compatibilidade com quase todo software</li>
+        <li>Interface polida e amigável</li>
+        <li>Excelente para jogos</li>
+        <li>Drivers prontos para uso</li>
+      </ul></div>
+      <div class="cons"><h4>Desvantagens</h4><ul>
+        <li>Custo de licença elevado</li>
+        <li>Código fechado</li>
+        <li>Pouca personalização profunda</li>
+        <li>Telemetria e atualizações forçadas</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- SIMULADOR -->
+<section id="simulador" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Interativo</span>
+    <h2>Qual sistema operacional combina com você?</h2>
+    <p>Responda 7 perguntas e descubra qual SO mais combina com seu perfil.</p>
+  </div>
+  <div class="sim-wrap glass reveal">
+    <div class="progress"><div id="simProgress"></div></div>
+    <div id="simStep" class="sim-step"></div>
+    <div class="sim-actions">
+      <button id="simPrev" class="btn btn-ghost">← Voltar</button>
+      <span id="simCount" class="muted">1 / 7</span>
+      <button id="simNext" class="btn btn-primary">Próxima →</button>
+    </div>
+    <div id="simResult" class="sim-result hidden"></div>
+  </div>
+</section>
+
+<!-- COMPARADOR -->
+<section id="comparador" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Lado a lado</span>
+    <h2>Comparador interativo</h2>
+    <p>Escolha dois sistemas e veja seus números em paralelo.</p>
+  </div>
+  <div class="cmp-presets reveal">
+    <button data-a="Linux" data-b="Windows" class="chip">Linux x Windows</button>
+    <button data-a="Ubuntu" data-b="Windows" class="chip">Ubuntu x Windows</button>
+    <button data-a="macOS" data-b="Linux" class="chip">macOS x Linux</button>
+    <button data-a="Fedora" data-b="Windows" class="chip">Fedora x Windows</button>
+  </div>
+  <div class="cmp-selects reveal">
+    <select id="cmpA"></select>
+    <select id="cmpB"></select>
+  </div>
+  <div id="cmpCards" class="cmp-grid reveal"></div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Teste seu conhecimento</span>
+    <h2>Quiz Interativo</h2>
+  </div>
+  <div class="quiz-wrap glass reveal">
+    <div class="progress"><div id="quizProgress"></div></div>
+    <div id="quizStep"></div>
+    <div id="quizScore" class="muted">Pontuação: 0</div>
+  </div>
+</section>
+
+<!-- BENCHMARK -->
+<section id="benchmark" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Performance</span>
+    <h2>Benchmark Visual</h2>
+    <p>Estimativas comparando consumo e desempenho — valores ilustrativos baseados em médias públicas.</p>
+  </div>
+
+  <div class="bench-grid reveal">
+    <div class="card glass">
+      <h3>Consumo de RAM em idle (MB)</h3>
+      <div class="bar"><span>Linux</span><div class="track"><div class="fill" style="width:25%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><b>~700</b></div>
+      <div class="bar"><span>macOS</span><div class="track"><div class="fill" style="width:55%;background:linear-gradient(90deg,#a78bfa,#60a5fa)"></div></div><b>~2200</b></div>
+      <div class="bar"><span>Windows</span><div class="track"><div class="fill" style="width:85%;background:linear-gradient(90deg,#60a5fa,#0078D4)"></div></div><b>~3500</b></div>
+    </div>
+
+    <div class="card glass">
+      <h3>Uso médio de CPU (%)</h3>
+      <div class="bar"><span>Linux</span><div class="track"><div class="fill" style="width:12%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><b>~3%</b></div>
+      <div class="bar"><span>macOS</span><div class="track"><div class="fill" style="width:25%;background:linear-gradient(90deg,#a78bfa,#60a5fa)"></div></div><b>~6%</b></div>
+      <div class="bar"><span>Windows</span><div class="track"><div class="fill" style="width:42%;background:linear-gradient(90deg,#60a5fa,#0078D4)"></div></div><b>~10%</b></div>
+    </div>
+  </div>
+
+  <div class="radar-wrap glass reveal">
+    <h3>Perfil multidimensional</h3>
+    <canvas id="radar" width="700" height="500"></canvas>
+    <div class="legend">
+      <span><i style="background:#10b981"></i>Linux</span>
+      <span><i style="background:#0078D4"></i>Windows</span>
+      <span><i style="background:#a78bfa"></i>macOS</span>
+    </div>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section id="historia" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Timeline</span>
+    <h2>História dos Sistemas Operacionais</h2>
+    <p>Da origem do UNIX nos anos 60 até o Steam Deck — uma linha do tempo explicada dos principais marcos que moldaram os sistemas que usamos hoje.</p>
+  </div>
+  <div class="timeline reveal">
+
+    <article class="t-card">
+      <div class="t-year">1969</div>
+      <h3>UNIX — o avô de quase tudo</h3>
+      <p>Ken Thompson e Dennis Ritchie criam o UNIX nos Bell Labs (AT&amp;T). Ele introduziu conceitos como sistema de arquivos hierárquico, multitarefa e a ideia de tudo ser um arquivo. Praticamente todos os sistemas modernos (Linux, macOS, Android, iOS) descendem direta ou indiretamente dele.</p>
+      <span class="t-tag t-unix">UNIX</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1981</div>
+      <h3>MS-DOS — a Microsoft entra em cena</h3>
+      <p>A IBM lança o IBM PC e escolhe o MS-DOS da Microsoft como sistema operacional. Era um sistema baseado em comandos de texto, sem janelas. Esse contrato foi o que transformou a Microsoft em gigante e abriu caminho pra dominância dela no mundo dos PCs.</p>
+      <span class="t-tag t-win">Windows</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1984</div>
+      <h3>Mac OS — a revolução das janelas</h3>
+      <p>A Apple lança o Macintosh com o System 1 (depois chamado de Mac OS Classic). Foi o primeiro sistema popular com interface gráfica, mouse e ícones. Um conceito que mudaria pra sempre como as pessoas usam computador.</p>
+      <span class="t-tag t-mac">macOS</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1985</div>
+      <h3>Windows 1.0 — Microsoft entra no visual</h3>
+      <p>A Microsoft responde à Apple lançando o Windows 1.0, uma interface gráfica que rodava por cima do MS-DOS. Era simples e cheio de limitações, mas plantou a semente do que viraria o sistema mais usado do planeta.</p>
+      <span class="t-tag t-win">Windows</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1991</div>
+      <h3>Linux — Linus Torvalds anuncia o kernel</h3>
+      <p>Com 21 anos, o finlandês Linus Torvalds anuncia em uma lista de e-mail o desenvolvimento de um sistema operacional gratuito "só por hobby". Esse projeto se tornaria o kernel mais utilizado no mundo — está dentro de servidores, celulares Android, supercomputadores e até carros.</p>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1993</div>
+      <h3>Debian — a distribuição mais influente</h3>
+      <p>Ian Murdock cria o Debian, uma das primeiras distribuições Linux organizadas e estáveis. Ele se tornaria a base de centenas de outras distribuições, incluindo o Ubuntu, e até hoje é referência em servidores pela estabilidade.</p>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">1995</div>
+      <h3>Windows 95 — a revolução do "Iniciar"</h3>
+      <p>O Windows 95 chega com o icônico botão Iniciar, barra de tarefas, suporte a nomes longos de arquivo e Plug and Play. Vendeu milhões em poucos dias e definiu o padrão visual que o Windows usa até hoje. Foi a explosão definitiva do PC pessoal.</p>
+      <span class="t-tag t-win">Windows</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2001</div>
+      <h3>Mac OS X e Windows XP — a era moderna começa</h3>
+      <p>A Apple lança o Mac OS X, agora baseado em UNIX (mais estável e seguro). No mesmo ano, a Microsoft lança o Windows XP, que se tornaria um dos sistemas mais queridos da história, durando mais de 12 anos no mercado.</p>
+      <span class="t-tag t-mac">macOS</span>
+      <span class="t-tag t-win">Windows</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2004</div>
+      <h3>Ubuntu — Linux para seres humanos</h3>
+      <p>Mark Shuttleworth funda a Canonical e lança o Ubuntu com o lema "Linux for human beings". A proposta era simples: deixar o Linux fácil pra qualquer pessoa usar, não só programador. Tornou-se a distribuição mais popular do mundo e mudou a percepção do Linux pra sempre.</p>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2008</div>
+      <h3>Android — Linux conquista o bolso</h3>
+      <p>O Google lança o Android baseado no kernel Linux. Em poucos anos, ele se torna o sistema operacional mais usado do mundo (contando celulares). Tecnicamente, hoje a maioria das pessoas usa Linux todos os dias sem nem perceber.</p>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2015</div>
+      <h3>Windows 10 — a unificação</h3>
+      <p>A Microsoft lança o Windows 10 com a ideia de "Windows como serviço": atualizações contínuas em vez de versões novas. Foi o primeiro Windows a ser oferecido como atualização gratuita pra usuários do 7 e 8.1.</p>
+      <span class="t-tag t-win">Windows</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2020</div>
+      <h3>Apple Silicon — adeus, Intel</h3>
+      <p>A Apple abandona os processadores Intel e lança seus próprios chips ARM (M1, depois M2 e M3). O macOS passa a rodar em uma arquitetura totalmente nova, com desempenho absurdo e bateria muito mais longa. Foi a maior mudança técnica da história do Mac.</p>
+      <span class="t-tag t-mac">macOS</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2022</div>
+      <h3>Steam Deck — Linux conquista os games</h3>
+      <p>A Valve lança o Steam Deck, um videogame portátil que roda SteamOS (baseado em Arch Linux) com a camada de compatibilidade Proton. De repente, milhares de jogos de Windows passaram a rodar perfeitamente no Linux. Foi a virada definitiva do Linux no mundo gamer.</p>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+    <article class="t-card">
+      <div class="t-year">2024</div>
+      <h3>IA + sistemas operacionais</h3>
+      <p>Windows lança o Copilot+ integrado ao sistema, a Apple anuncia o Apple Intelligence no macOS e iOS, e distribuições Linux passam a integrar IA local em ferramentas do dia a dia. Os sistemas operacionais começam a virar plataformas de IA, abrindo um novo capítulo da computação pessoal.</p>
+      <span class="t-tag t-win">Windows</span>
+      <span class="t-tag t-mac">macOS</span>
+      <span class="t-tag t-linux">Linux</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section id="terminal" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">CLI</span>
+    <h2>Terminal Linux (simulação)</h2>
+    <p>Veja comandos reais do Linux sendo executados — e abaixo, um guia em português explicando o que cada um faz.</p>
+  </div>
+  <div class="term glass reveal">
+    <div class="dots"><span></span><span></span><span></span><i>kioshi@uni: ~</i></div>
+    <pre id="termOut"></pre>
+  </div>
+
+  <div class="term-guide reveal">
+    <h3>📖 Guia dos comandos (em português)</h3>
+    <p class="muted" style="margin-bottom:1.2rem">Pra quem nunca usou um terminal Linux: cada linha que aparece ali em cima começa com <code>kioshi@uni:~$</code> (o "prompt"), seguida de um comando. Veja abaixo o que cada um significa:</p>
+    <ul class="cmd-guide">
+      <li><code>whoami</code><span><b>Quem sou eu?</b> — mostra o nome do usuário que está logado no momento. Muito usado em scripts pra saber quem está executando algo.</span></li>
+      <li><code>uname -a</code><span><b>Informações do sistema</b> — exibe o nome do kernel (Linux), versão, arquitetura do processador (x86_64, ARM, etc.) e informações da máquina. Útil pra saber em qual sistema você está.</span></li>
+      <li><code>lsb_release -d</code><span><b>Qual distribuição estou usando?</b> — mostra o nome e a versão da distribuição Linux instalada (Ubuntu, Debian, Fedora, etc.). É como perguntar "qual Linux é esse?".</span></li>
+      <li><code>free -h</code><span><b>Quanta memória RAM está livre?</b> — mostra a memória total, usada e disponível, no formato fácil de ler (G de gigabyte, M de megabyte). Ótimo pra ver se o sistema está pesado.</span></li>
+      <li><code>uptime</code><span><b>Há quanto tempo o computador está ligado?</b> — exibe o horário atual, há quantos dias/horas o sistema está em funcionamento e a média de uso da CPU. Servidores Linux costumam ficar meses ou anos sem desligar.</span></li>
+      <li><code>ls /home/kioshi</code><span><b>Listar arquivos</b> — o <code>ls</code> mostra o conteúdo de uma pasta. Aqui ele lista tudo que tem dentro da pasta pessoal do usuário "kioshi" (equivalente à "Meus Documentos" do Windows).</span></li>
+      <li><code>cat trabalho_so/info.txt</code><span><b>Ler um arquivo de texto</b> — o comando <code>cat</code> mostra na tela o conteúdo de um arquivo. É o jeito mais rápido de ver o que tem dentro de um .txt sem precisar abrir um editor.</span></li>
+      <li><code>echo "Liberdade &gt; Tudo"</code><span><b>Imprimir uma mensagem</b> — o <code>echo</code> simplesmente repete na tela o que você escreveu entre aspas. Muito usado em scripts pra mostrar mensagens ou pra gravar texto em arquivos.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONCLUSÃO -->
+<section id="conclusao" class="section alt">
+  <div class="section-head reveal">
+    <span class="eyebrow">Conclusão crítica</span>
+    <h2>Qual sistema escolher?</h2>
+  </div>
+  <div class="cards-3">
+    <div class="card reveal"><h3>🏠 Uso doméstico</h3><p>Windows ou macOS para a maioria; Linux Mint/Ubuntu para quem quer leveza e privacidade.</p></div>
+    <div class="card reveal"><h3>🏢 Empresas</h3><p>Modelo híbrido: Windows + AD no desktop, Linux na infra, macOS para criativos.</p></div>
+    <div class="card reveal"><h3>🖥️ Servidores</h3><p>Linux domina (Ubuntu Server, RHEL, Debian). Windows Server em ecossistemas Microsoft.</p></div>
+    <div class="card reveal"><h3>🎓 Estudantes de tecnologia</h3><p>Linux é praticamente obrigatório: terminal, scripts, Docker, Kubernetes.</p></div>
+    <div class="card reveal"><h3>🔄 Linux pode substituir Windows?</h3><p>Sim — para navegação, escritório, dev web/mobile, servidores e máquinas antigas.</p></div>
+  </div>
+
+  <div class="card glass reveal" style="margin-top:2rem">
+    <h3>Síntese final</h3>
+    <p>SO livres e proprietários representam filosofias diferentes que coexistem e se beneficiam mutuamente. O modelo aberto puxa a inovação em infra e nuvem; o proprietário entrega previsibilidade, suporte e compatibilidade. Para o profissional de SI, conhecer os dois é vantagem competitiva — e, na prática, o ecossistema moderno é sempre híbrido.</p>
+  </div>
+</section>
+
+<!-- REFERÊNCIAS -->
+<section id="referencias" class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Referências</span>
+    <h2>Fontes consultadas</h2>
+  </div>
+  <ul class="refs reveal">
+    <li>TANENBAUM, A. S. <em>Sistemas Operacionais Modernos</em>. Pearson, 4ª ed.</li>
+    <li>SILBERSCHATZ, A.; GALVIN, P. B.; GAGNE, G. <em>Fundamentos de Sistemas Operacionais</em>. LTC.</li>
+    <li>Free Software Foundation — As 4 liberdades. <span>gnu.org/philosophy/free-sw.html</span></li>
+    <li>The Linux Foundation — State of Open Source Reports. <span>linuxfoundation.org</span></li>
+    <li>Kernel.org — Documentação oficial do kernel Linux.</li>
+    <li>Microsoft Learn — Windows e Windows Server.</li>
+    <li>Apple Developer — macOS Internals.</li>
+    <li>Red Hat — Open Hybrid Cloud.</li>
+    <li>DistroWatch — Comparativo de distribuições.</li>
+    <li>Stack Overflow Developer Survey — Uso de SO entre devs.</li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <div>
+    <strong>Kioshi Iquegami Neto</strong> · 1º Ano B · Sistemas de Informação
+  </div>
+  <div class="muted">© 2026 · Trabalho acadêmico · Feito com HTML, CSS e JavaScript</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
